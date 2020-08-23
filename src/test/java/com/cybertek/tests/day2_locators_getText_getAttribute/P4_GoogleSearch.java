@@ -1,6 +1,7 @@
 package com.cybertek.tests.day2_locators_getText_getAttribute;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -20,6 +21,11 @@ public class P4_GoogleSearch {
         driver.get("https://google.com");
 
         //3- Write “apple” in search box
+        // To be able to write anything in the search box
+        // I need to locate the search box and use sendKeys() method to send "apple"
+
+        driver.findElement(By.name("q")).sendKeys("apple");
+
         //4- Click google search button
         //5- Verify title:
         //Expected: Title should start with “apple” word
