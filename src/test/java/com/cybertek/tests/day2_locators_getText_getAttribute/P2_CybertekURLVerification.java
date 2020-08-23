@@ -20,6 +20,8 @@ public class P2_CybertekURLVerification {
         driver.manage().window().maximize();
 
         //2. Go to https://practice.cybertekschool.com
+        driver.get("https://practice.cybertekschool.com");
+
         //3. Verify URL contains
         //Expected: cybertekschool
         //4. Verify title:
