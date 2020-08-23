@@ -16,6 +16,7 @@ public class P1_GoogleTitleVerification {
         //we use WebDriverManager
 
         //open a chrome browser
+        //we create an instance of the ChromeDriver, which also opens an empty browser for us
         WebDriver driver = new ChromeDriver();
 
         // 2. Go to https://www.google.com
@@ -23,6 +24,15 @@ public class P1_GoogleTitleVerification {
 
         // 3. Verify title:
         //Expected: Google
+
+        String expectedTitle = "Google";
+        String actualTitle = driver.getTitle();
+
+        if (actualTitle.equals(expectedTitle)){
+            System.out.println("Title verification PASSED!");
+        }else{
+            System.out.println("Title verification FAILED!!!");
+        }
 
 
     }
