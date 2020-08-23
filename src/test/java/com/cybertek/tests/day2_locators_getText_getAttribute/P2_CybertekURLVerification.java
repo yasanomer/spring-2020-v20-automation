@@ -35,6 +35,7 @@ public class P2_CybertekURLVerification {
 
         //4. Verify title:
         //Expected: Practice
+        //-->actual title<---     -->expected title<--
         if (driver.getTitle().equals("Practice")){
             System.out.println("Title verification PASSED!");
         }else{
