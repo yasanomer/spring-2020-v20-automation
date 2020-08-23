@@ -19,11 +19,20 @@ public class P2_CybertekURLVerification {
         // this line will maximize the newly opened browser page
         driver.manage().window().maximize();
 
-        //2. Go to https://practice.cybertekschool.com
-        driver.get("https://practice.cybertekschool.com");
+        //2. Go to http://practice.cybertekschool.com
+        driver.get("http://practice.cybertekschool.com");
 
         //3. Verify URL contains
         //Expected: cybertekschool
+        String expectedInUrl = "cybertekschool";
+        String actualUrl = driver.getCurrentUrl();
+
+        if (actualUrl.contains(expectedInUrl)){
+            System.out.println("URL Verification PASSED!");
+        }else{
+            System.out.println("URL Verification FAILED!!!");
+        }
+
         //4. Verify title:
         //Expected: Practice
 
