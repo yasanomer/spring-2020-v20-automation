@@ -37,7 +37,7 @@ public class P5_EtsyTitleVerification {
             System.out.println("Etsy title verification FAILED!!!");
         }
 
-
+        //BREAK UNTIL: 3.16PM CST 4.16PM EST
 
     }
 
