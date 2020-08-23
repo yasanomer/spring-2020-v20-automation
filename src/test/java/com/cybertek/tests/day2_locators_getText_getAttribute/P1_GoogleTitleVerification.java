@@ -17,8 +17,10 @@ public class P1_GoogleTitleVerification {
 
         //open a chrome browser
         WebDriver driver = new ChromeDriver();
-        
+
         // 2. Go to https://www.google.com
+        driver.get("https://www.google.com");
+
         // 3. Verify title:
         //Expected: Google
 
