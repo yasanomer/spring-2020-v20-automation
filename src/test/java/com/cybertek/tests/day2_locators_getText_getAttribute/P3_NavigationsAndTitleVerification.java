@@ -22,7 +22,8 @@ public class P3_NavigationsAndTitleVerification {
 
         //3- Click to Gmail from top right.
         // we are locating the "Gmail" link web element using findElement method AND linkText LOCATOR.
-        driver.findElement(By.linkText("Gmail")).click();
+        //driver.findElement(By.linkText("Gmail")).click();
+        driver.findElement(By.partialLinkText("mail")).click();
 
         //4- Verify title contains:
         //Expected: Gmail
@@ -50,7 +51,6 @@ public class P3_NavigationsAndTitleVerification {
         }else{
             System.out.println("Google title verification FAILED!!!");
         }
-
 
     }
 
