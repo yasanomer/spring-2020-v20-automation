@@ -36,5 +36,19 @@ public class WT_CybertekLinkVerification {
 
         //6. Verify textbox displayed the content as expected.
         //Expected: “Your e-mail’s been sent!”
+
+        //verify the text
+
+        String actualText = driver.findElement(By.name("confirmation_message")).getText();
+        String expectedText = "Your e-mail’s been sent!";
+
+        if (actualText.equals(expectedText)){
+            System.out.println("Header text value verification PASSED!");
+        }else{
+            System.out.println("Header text value verification FAILED!!!");
+        }
+        
+        //verify if the web element is displayed or not
+
     }
 }
