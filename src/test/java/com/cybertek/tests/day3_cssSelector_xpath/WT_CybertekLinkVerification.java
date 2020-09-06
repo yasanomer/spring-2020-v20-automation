@@ -40,15 +40,19 @@ public class WT_CybertekLinkVerification {
         //verify the text
 
         String actualText = driver.findElement(By.name("confirmation_message")).getText();
-        String expectedText = "Your e-mail’s been sent!";
+        String expectedText = "Your e-mail's been sent!";
+
+        System.out.println("actualText = " + actualText);
+        System.out.println("expectedText = " + expectedText);
 
         if (actualText.equals(expectedText)){
             System.out.println("Header text value verification PASSED!");
         }else{
             System.out.println("Header text value verification FAILED!!!");
         }
-        
-        //verify if the web element is displayed or not
 
+        //verify if the web element is displayed or not
+        //break until 11.15cst 12.15est
+        //pushing the codes now...
     }
 }
