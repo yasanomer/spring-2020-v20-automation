@@ -3,6 +3,7 @@ package com.cybertek.tests.day3_cssSelector_xpath;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class WT_CybertekLinkVerification {
@@ -18,10 +19,18 @@ public class WT_CybertekLinkVerification {
         driver.get("http://practice.cybertekschool.com/forgot_password");
 
         //3. Enter any email into input box
-        driver.findElement(By.name("email")).sendKeys("anyemail@domain.com");
+        //driver.findElement(By.name("email")).sendKeys("anyemail@domain.com");
+
+        WebElement emailInputBox = driver.findElement(By.name("email"));
+
+        emailInputBox.sendKeys("anyemail@domain.com");
 
         //4. Click on Retrieve password
-        driver.findElement(By.id("form_submit")).click();
+
+        //driver.findElement(By.id("form_submit")).click();
+
+        WebElement retrievePasswordButton = driver.findElement(By.id("form_submit"));
+        retrievePasswordButton.click();
 
         //5. Verify URL contains:
         //Expected: “email_sent”
@@ -38,8 +47,9 @@ public class WT_CybertekLinkVerification {
         //Expected: “Your e-mail’s been sent!”
 
         //verify the text
+        WebElement confirmationMessage = driver.findElement(By.name("confirmation_message"));
 
-        String actualText = driver.findElement(By.name("confirmation_message")).getText();
+        String actualText = confirmationMessage.getText();
         String expectedText = "Your e-mail's been sent!";
 
         System.out.println("actualText = " + actualText);
@@ -52,6 +62,8 @@ public class WT_CybertekLinkVerification {
         }
 
         //verify if the web element is displayed or not
-        
+
+
+
     }
 }
