@@ -52,7 +52,6 @@ public class WT_CybertekLinkVerification {
         }
 
         //verify if the web element is displayed or not
-        //break until 11.15cst 12.15est
-        //pushing the codes now...
+        
     }
 }
