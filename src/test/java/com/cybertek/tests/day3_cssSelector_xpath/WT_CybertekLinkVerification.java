@@ -62,7 +62,11 @@ public class WT_CybertekLinkVerification {
         }
 
         //verify if the web element is displayed or not
-
+        if (confirmationMessage.isDisplayed()){
+            System.out.println("Confirmation message is displayed. Verification PASSED!");
+        }else{
+            System.out.println("Confirmation message is NOT displayed. Verification FAILED!!!");
+        }
 
 
     }
