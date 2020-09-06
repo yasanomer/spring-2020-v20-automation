@@ -24,8 +24,16 @@ public class P2_ZeroBankVerification {
         String expectedLinkText = "Zero Bank";
         String actualLinkText = zeroBankLinkTopLeft.getText();
 
+        if (actualLinkText.equals(expectedLinkText)) {
+            System.out.println("Link text verification PASSED!");
+        }else{
+            System.out.println("Link text verification FAILED!!!");
+        }
+
 //        4. Verify link href attribute value contains:
 //        Expected: “index.html”
+
+        
 
 
 
