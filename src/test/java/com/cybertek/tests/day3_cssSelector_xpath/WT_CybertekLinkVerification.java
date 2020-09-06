@@ -54,7 +54,8 @@ public class WT_CybertekLinkVerification {
 
         System.out.println("actualText = " + actualText);
         System.out.println("expectedText = " + expectedText);
-
+        // mac = command + d for copy/paste one line
+        // windows = cntrl + d
         if (actualText.equals(expectedText)){
             System.out.println("Header text value verification PASSED!");
         }else{
