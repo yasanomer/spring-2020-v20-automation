@@ -18,11 +18,16 @@ public class P3_Amazon_cssSelector {
         //3. Enter search term (use cssSelector to locate search box)
         //Locating a web element using the first syntax in cssSelector
 
-        WebElement searchBox = driver.findElement(By.cssSelector("input[id='twotabsearchtextbox']"));
-        //WebElement searchBox = driver.findElement(By.cssSelector("input#twotabsearchtextbox']"));
+        //WebElement searchBox = driver.findElement(By.cssSelector("input[id='twotabsearchtextbox']"));
+        WebElement searchBox = driver.findElement(By.cssSelector("input#twotabsearchtextbox"));
 
         searchBox.sendKeys("wooden spoon" + Keys.ENTER);
         //4. Verify title contains search term
+        //expected
+        //actual
+        //create if condition
+
+        //BREAK UNTIL 3.12PM CST - 4.12PM EST
     }
 
 }
