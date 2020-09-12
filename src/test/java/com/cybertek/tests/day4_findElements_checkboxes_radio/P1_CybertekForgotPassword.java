@@ -45,9 +45,16 @@ public class P1_CybertekForgotPassword {
         //Option #4: button.radius
         WebElement retrivePasswordButton = driver.findElement(By.cssSelector("button.radius"));
 
-
-
         //f. “Powered by Cybertek School” text
+        WebElement linkText = driver.findElement(By.xpath("//a[.='Cybertek School']"));
+        WebElement poweredByDiv = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
+
+        System.out.println("linkText = " + linkText.getText());
+        System.out.println("poweredByDiv = " + poweredByDiv.getText());
+
+
+
+
         //4. Verify all WebElements are displayed.
 
     }
