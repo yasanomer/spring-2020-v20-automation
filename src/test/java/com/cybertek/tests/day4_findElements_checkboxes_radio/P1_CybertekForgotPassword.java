@@ -1,7 +1,9 @@
 package com.cybertek.tests.day4_findElements_checkboxes_radio;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class P1_CybertekForgotPassword {
 
@@ -16,7 +18,19 @@ public class P1_CybertekForgotPassword {
 
         //3. Locate all the WebElements on the page using XPATH and/or CSS locator only (total of 6)
         //a. “Home” link
+        // Using the text of the anchor tag to locate a
+        WebElement homeLink = driver.findElement(By.xpath("//a[.='Home']"));
+
+        //If I want to locate the same web element using href attribute value
+        //WebElement homeLink = driver.findElement(By.xpath("//a[@href='/']"));
+
+        //to open search box in inspection tool:
+            //MAC: command + F
+            //Windows : control + F
+
         //b. “Forgot password” header
+        WebElement header = driver.findElement(By.xpath("//h2[.='Forgot Password']"));
+        
         //c. “E-mail” text
         //d. E-mail input box
         //e. “Retrieve password” button
