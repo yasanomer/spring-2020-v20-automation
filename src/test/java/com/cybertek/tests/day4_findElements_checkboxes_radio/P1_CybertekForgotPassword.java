@@ -54,8 +54,16 @@ public class P1_CybertekForgotPassword {
 
 
 
-
         //4. Verify all WebElements are displayed.
+        //.isDisplayed --> returns true if given web element is displayed
+        //.isDisplayed --> returns flase if given web element is NOT displayed
+        if (homeLink.isDisplayed() && emailLabel.isDisplayed() && header.isDisplayed()
+                && emailInput.isDisplayed() && retrivePasswordButton.isDisplayed()
+                    && poweredByDiv.isDisplayed()){
+            System.out.println("ALL WEB ELEMENTS ARE DISPLAYED. VERIFICATION PASSED!");
+        }else {
+            System.out.println("One or more of the web elements are not displayed. Verification FAILED!!!");
+        }
 
     }
 
