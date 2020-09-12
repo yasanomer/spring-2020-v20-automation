@@ -54,5 +54,24 @@ public class P3_Checkbox_Practice {
         }else{
             System.out.println("Checkbox 2 is selected. Verification FAILED!!!");
         }
+
+        WebElement homeLink = driver.findElement(By.xpath("//a[.='Home']"));
+
+        //homeLink.click();
+
+        //Thread.sleep(1000);
+
+        ///driver.navigate().back();
+
+        Thread.sleep(1000);
+
+        driver.navigate().refresh();
+
+        checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
+
+        checkbox1.click();
+
+
+
     }
 }
