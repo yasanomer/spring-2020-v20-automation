@@ -14,12 +14,10 @@ public class P3_Checkbox_Practice {
         driver.get("http://practice.cybertekschool.com/checkboxes");
 
         //Locating the first checkbox
-        WebElement checkbox1 = driver.findElement(By.xpath(""));
+        WebElement checkbox1 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[1]"));
 
-        
         //Locating the second checkbox
-        WebElement checkbox2 = driver.findElement(By.xpath(""));
-
+        WebElement checkbox2 = driver.findElement(By.xpath("//form[@id='checkboxes']/input[2]"));
 
         //2. Confirm checkbox #1 is NOT selected by default
         //3. Confirm checkbox #2 is SELECTED by default.
