@@ -36,8 +36,17 @@ public class P1_CybertekForgotPassword {
 
         //d. E-mail input box
         WebElement emailInput = driver.findElement(By.xpath("//input[@name='email']"));
-        
+
         //e. “Retrieve password” button
+        //Using css selector to locate this button
+        //Option #1: using this syntax --> button#form_submit
+        //Option #2: using this syntax --> button[id='form_submit']
+        //Option #3: using this syntax --> button[class='radius']
+        //Option #4: button.radius
+        WebElement retrivePasswordButton = driver.findElement(By.cssSelector("button.radius"));
+
+
+
         //f. “Powered by Cybertek School” text
         //4. Verify all WebElements are displayed.
 
