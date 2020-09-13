@@ -25,7 +25,7 @@ public class Dropdown_Introduction {
     }
 
     @Test
-    public void dropdown_test_1(){
+    public void dropdown_test_1() throws InterruptedException{
         //TC#1: Verifying “Simple dropdown” and “State selection” dropdown default values
         //3. Verify “Simple dropdown” default selected value is correct
         //Expected: “Please select an option”
@@ -37,6 +37,9 @@ public class Dropdown_Introduction {
         String expectedSelectedOption = "Please select an option";
 
         Assert.assertEquals(actualSelectedOption, expectedSelectedOption);
+
+        Thread.sleep(2000);
+        simpleDropdown.selectByVisibleText("Option 2");
 
         //4. Verify “State selection” default selected value is correct
         //Expected: “Select a State”
