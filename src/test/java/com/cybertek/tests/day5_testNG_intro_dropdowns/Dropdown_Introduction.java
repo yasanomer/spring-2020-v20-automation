@@ -4,6 +4,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -34,6 +35,8 @@ public class Dropdown_Introduction {
         //return type is web element
         String actualSelectedOption = simpleDropdown.getFirstSelectedOption().getText();
         String expectedSelectedOption = "Please select an option";
+
+        Assert.assertEquals(actualSelectedOption, expectedSelectedOption);
 
         //4. Verify “State selection” default selected value is correct
         //Expected: “Select a State”
