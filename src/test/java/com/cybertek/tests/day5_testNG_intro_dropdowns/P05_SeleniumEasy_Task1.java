@@ -28,6 +28,12 @@ public class P05_SeleniumEasy_Task1 {
         WebElement successMessage = driver.findElement(By.xpath("//div[@id='txtAge']"));
 
         //3. Verify “Success – Check box is checked” message is NOT displayed.
+        if (!successMessage.isDisplayed()){
+            System.out.println("Success message is not displayed. Verification PASSED!");
+        }else{
+            System.out.println("Success message is displayed. Verification FAILED!!!");
+        }
+
         //4. Click to checkbox under “Single Checkbox Demo” section
         //5. Verify “Success – Check box is checked” message is displayed.
 
