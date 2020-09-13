@@ -1,5 +1,6 @@
 package com.cybertek.tests.day5_testNG_intro_dropdowns;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class TestNG_Introduction {
@@ -32,6 +33,19 @@ public class TestNG_Introduction {
     @Test
     public void test2(){
         System.out.println("Test2 is running...");
+    }
+
+    @Test
+    public void test3(){
+        String str1 = "TestNG";
+        String str2 = "TestNG";
+        String str3 = "asdfasdf";
+
+        Assert.assertTrue(str1.equals(str2));
+
+        Assert.assertTrue(str1.equals(str3) , "Str1 is not equal to Str3.");
+
+
     }
 
 
