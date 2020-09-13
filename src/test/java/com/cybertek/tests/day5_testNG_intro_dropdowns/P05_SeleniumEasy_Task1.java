@@ -43,7 +43,7 @@ public class P05_SeleniumEasy_Task1 {
             System.out.println("Success message is displayed. Verification PASSED!");
         }else{
             System.out.println("Success message is NOT displayed. Verification FAILED!!!");
-        }
+        } //BREAK UNTIL 11.05AM CST - 12.05AM EST
 
 
         Thread.sleep(3000);
