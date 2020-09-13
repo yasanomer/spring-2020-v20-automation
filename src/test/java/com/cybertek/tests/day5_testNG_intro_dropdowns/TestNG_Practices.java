@@ -20,9 +20,7 @@ public class TestNG_Practices {
     public void setUpMethod(){
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
         //1- Go to google
         driver.get("https://www.google.com");
 
@@ -31,18 +29,20 @@ public class TestNG_Practices {
     @Test
     public void google_title_verification(){
 
+        System.out.println("google_title_verification test is running");
         //2- Verify title is google
         String expectedTitle = "Google";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle, expectedTitle, "Titles are not matching!");
+
     }
 
     @Test
     public void google_search_title_verification(){
         //go to google --> this part will be taken care of in the beforeMethod
-
         //search apple
+        System.out.println("google_search_title_verification test is running");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("apple" + Keys.ENTER);
         //make sure title contains apple
@@ -57,7 +57,7 @@ public class TestNG_Practices {
 
     @AfterMethod
     public void tearDownMethod() throws InterruptedException{
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         driver.close();
     }
 
