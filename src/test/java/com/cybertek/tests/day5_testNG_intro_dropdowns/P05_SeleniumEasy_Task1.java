@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class P05_SeleniumEasy_Task1 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         //TC #2: SeleniumEasy Checkbox Verification – Section 1
         //1. Open Chrome browser
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -28,7 +28,7 @@ public class P05_SeleniumEasy_Task1 {
         WebElement successMessage = driver.findElement(By.xpath("//div[@id='txtAge']"));
 
         //3. Verify “Success – Check box is checked” message is NOT displayed.
-        if (!successMessage.isDisplayed()){
+        if (!successCheckbox.isSelected() && !successMessage.isDisplayed()){
             System.out.println("Success message is not displayed. Verification PASSED!");
         }else{
             System.out.println("Success message is displayed. Verification FAILED!!!");
@@ -39,10 +39,14 @@ public class P05_SeleniumEasy_Task1 {
 
         //5. Verify “Success – Check box is checked” message is displayed.
 
-        if (successMessage.isDisplayed()){
+        if (successCheckbox.isSelected() && successMessage.isDisplayed()){
             System.out.println("Success message is displayed. Verification PASSED!");
         }else{
             System.out.println("Success message is NOT displayed. Verification FAILED!!!");
         }
+
+
+        Thread.sleep(3000);
+        driver.close();
     }
 }
