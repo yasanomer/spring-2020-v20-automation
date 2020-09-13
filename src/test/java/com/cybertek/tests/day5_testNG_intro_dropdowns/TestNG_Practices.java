@@ -23,7 +23,6 @@ public class TestNG_Practices {
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         //1- Go to google
         driver.get("https://www.google.com");
-
     }
 
     @Test
@@ -54,12 +53,13 @@ public class TestNG_Practices {
     }
 
 
-
     @AfterMethod
     public void tearDownMethod() throws InterruptedException{
         Thread.sleep(1000);
         driver.close();
     }
+
+    //BREAK UNTIL 3.02PM CST - 4.02PM EST
 
 
 }
