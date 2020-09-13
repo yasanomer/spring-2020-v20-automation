@@ -35,8 +35,14 @@ public class P05_SeleniumEasy_Task1 {
         }
 
         //4. Click to checkbox under “Single Checkbox Demo” section
+        successCheckbox.click();
+
         //5. Verify “Success – Check box is checked” message is displayed.
 
-
+        if (successMessage.isDisplayed()){
+            System.out.println("Success message is displayed. Verification PASSED!");
+        }else{
+            System.out.println("Success message is NOT displayed. Verification FAILED!!!");
+        }
     }
 }
