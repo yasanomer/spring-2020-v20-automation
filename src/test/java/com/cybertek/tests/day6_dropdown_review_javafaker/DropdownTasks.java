@@ -4,6 +4,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -42,7 +43,15 @@ public class DropdownTasks {
         Thread.sleep(1000);
         stateDropdown.selectByIndex(5);
         //6. Verify final selected option is California.
+        String expectedResult = "California";
+        String actualResult = stateDropdown.getFirstSelectedOption().getText();
+
+        Assert.assertEquals(actualResult, expectedResult, "Actual vs expected is not equal!");
+
         //Use all Select options. (visible text, value, index)
+
+
+
     }
 
 }
