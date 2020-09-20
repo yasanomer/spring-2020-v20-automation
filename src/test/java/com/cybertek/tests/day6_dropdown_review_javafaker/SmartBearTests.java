@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -104,8 +105,11 @@ public class SmartBearTests {
         //12. Click on “Process”
         WebElement processButton = driver.findElement(By.id("ctl00_MainContent_fmwOrder_InsertButton"));
         processButton.click();
-        
-        //13.Verify success message “New order has been successfully added.”
+
+        //13.Verify success message “New order has been successfully added.” is displayed.
+        WebElement successMessage = driver.findElement(By.xpath("//strong"));
+        Assert.assertTrue(successMessage.isDisplayed(), "Success message is not displayed!");
+
     }
 
 
