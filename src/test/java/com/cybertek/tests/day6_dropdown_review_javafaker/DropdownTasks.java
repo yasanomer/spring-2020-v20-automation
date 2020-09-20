@@ -48,11 +48,22 @@ public class DropdownTasks {
         String actualResult = stateDropdown.getFirstSelectedOption().getText();
 
         Assert.assertEquals(actualResult, expectedResult, "Actual vs expected is not equal!");
-
         //Use all Select options. (visible text, value, index)
-        
 
 
     }
+
+    @Test
+    public void test3_date_dropdown_verification(){
+        //TC #3: Selecting date on dropdown and verifying
+        //1. Open Chrome browser
+        //2. Go to http://practice.cybertekschool.com/dropdown
+        //st
+        //3. Select “December 1 , 1921” and verify it is selected.
+        //   Select year using Select month using Select day using
+        //: visible text
+        //: value attribute : index number
+    }
+
 
 }
