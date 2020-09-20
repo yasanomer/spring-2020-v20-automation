@@ -3,11 +3,13 @@ package com.cybertek.tests.day6_dropdown_review_javafaker;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class DropdownTasks {
@@ -108,7 +110,27 @@ public class DropdownTasks {
     public void test4_multiple_value_select_dropdown(){
 
         //3. Select all the options from multiple select dropdown.
-        //4. Print out all selected values.
+        // Locate the dropdown
+
+        Select multipleSelectDropdown = new Select(driver.findElement(By.xpath("//select[@name='Languages']")));
+
+        //Creating a list of web elements to store all of the options inside of this dropdown
+
+        List<WebElement> allOptions = multipleSelectDropdown.getOptions();
+
+        //Loop through the options to select all of them
+
+        for(WebElement eachOption : allOptions){
+            eachOption.click(); // this will click each option with every iteration
+
+            //4. Print out all selected values.
+            System.out.println("Selected: " + eachOption.getText());
+
+            //Asserting the option is actually selected or not
+            Assert.assertTrue(eachOption.isSelected(), "The option: "+eachOption.getText()+" is not selected!");
+
+        }
+
         //5. Deselect all values.
     }
 
