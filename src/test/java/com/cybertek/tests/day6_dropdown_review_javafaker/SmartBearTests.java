@@ -95,7 +95,14 @@ public class SmartBearTests {
 
         //11. Generate card number using JavaFaker
         WebElement creditCardInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6"));
+        creditCardInput.sendKeys(faker.finance().creditCard().replaceAll("-", ""));
+
+        //Enter expiration date
+        WebElement expirationInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1"));
+        expirationInput.sendKeys("12/25");
         //12. Click on “Process”
+        
+
         //13.Verify success message “New order has been successfully added.”
     }
 
