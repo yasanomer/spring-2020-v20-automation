@@ -100,9 +100,11 @@ public class SmartBearTests {
         //Enter expiration date
         WebElement expirationInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1"));
         expirationInput.sendKeys("12/25");
-        //12. Click on “Process”
-        
 
+        //12. Click on “Process”
+        WebElement processButton = driver.findElement(By.id("ctl00_MainContent_fmwOrder_InsertButton"));
+        processButton.click();
+        
         //13.Verify success message “New order has been successfully added.”
     }
 
