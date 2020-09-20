@@ -5,6 +5,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -51,6 +52,12 @@ public class SmartBearTests {
         orderLink.click();
 
         //7. Select familyAlbum from product, set quantity to 2
+        Select productDropdown = new Select(driver.findElement(By.id("ctl00_MainContent_fmwOrder_ddlProduct")));
+        productDropdown.selectByVisibleText("FamilyAlbum");
+
+        WebElement quantityInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
+        quantityInput.sendKeys("2");
+
         //8. Click to “Calculate” button
         //9. Fill address Info with JavaFaker
         //• Generate: name, street, city, state, zip code
