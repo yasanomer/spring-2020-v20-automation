@@ -3,6 +3,7 @@ package com.cybertek.tests.day6_dropdown_review_javafaker;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,4 +21,11 @@ public class SmartBearTests {
         //get the page
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
     }
+
+
+    @Test
+    public void task1_login_page_links_print_test(){
+
+    }
+
 }
