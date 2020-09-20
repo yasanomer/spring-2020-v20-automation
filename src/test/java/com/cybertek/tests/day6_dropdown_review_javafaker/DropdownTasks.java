@@ -62,10 +62,14 @@ public class DropdownTasks {
         Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
         Select dayDropdown = new Select(driver.findElement(By.xpath("//select[@id='day']")));
 
+        //creating expected values in one place
+        String expectedYear = "1921";
+        String expectedMonth = "December";
+        String expectedDay = "1";
+
         //3. Select “December 1 , 1921” and verify it is selected.
         //   Select year using Select month using Select day using
-        //: visible text
-        //: value attribute : index number
+        //  : visible text: value attribute : index number
 
         //BREAK UNTIL 11.11AM CST - 12.11PM EST
     }
