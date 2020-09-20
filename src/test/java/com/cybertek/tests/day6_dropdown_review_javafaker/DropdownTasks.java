@@ -103,5 +103,14 @@ public class DropdownTasks {
 
     }
 
+    //TC #4: Selecting value from multiple select dropdown
+    @Test
+    public void test4_multiple_value_select_dropdown(){
+
+        //3. Select all the options from multiple select dropdown.
+        //4. Print out all selected values.
+        //5. Deselect all values.
+    }
+
 
 }
