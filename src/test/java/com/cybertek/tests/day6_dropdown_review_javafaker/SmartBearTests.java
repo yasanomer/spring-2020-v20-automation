@@ -2,6 +2,7 @@ package com.cybertek.tests.day6_dropdown_review_javafaker;
 
 import com.cybertek.utilities.SmartBearUtilities;
 import com.cybertek.utilities.WebDriverFactory;
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -75,9 +76,19 @@ public class SmartBearTests {
         WebElement stateInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox4"));
         WebElement zipInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5"));
 
-
         //9. Fill address Info with JavaFaker
+        Faker faker = new Faker();
         //• Generate: name, street, city, state, zip code
+        nameInput.sendKeys(faker.name().fullName());
+
+        streetInput.sendKeys(faker.address().streetAddress());
+
+        cityInput.sendKeys(faker.address().city());
+
+        stateInput.sendKeys(faker.address().state());
+
+        zipInput.sendKeys(faker.address().zipCode());
+
         //10. Click on “visa” radio button
         //11. Generate card number using JavaFaker
         //12. Click on “Process”
