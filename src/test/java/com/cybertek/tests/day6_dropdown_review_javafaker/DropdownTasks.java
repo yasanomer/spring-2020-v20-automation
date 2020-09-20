@@ -92,6 +92,8 @@ public class DropdownTasks {
         String actualMonth = monthDropdown.getFirstSelectedOption().getText();
         String actualDay = dayDropdown.getFirstSelectedOption().getText();
 
+        //Assert.assertEquals("1921", yearDropdown.getFirstSelectedOption().getText());
+
         //creating assert lines to compare actual vs expected
         Assert.assertEquals(actualYear, expectedYear, "Actual year vs expected year not equal");
         Assert.assertEquals(actualMonth, expectedMonth, "Actual month vs expected month not equal");
