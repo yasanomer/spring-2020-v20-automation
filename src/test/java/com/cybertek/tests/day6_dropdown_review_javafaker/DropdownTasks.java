@@ -56,13 +56,18 @@ public class DropdownTasks {
     @Test
     public void test3_date_dropdown_verification(){
         //TC #3: Selecting date on dropdown and verifying
-        //1. Open Chrome browser
-        //2. Go to http://practice.cybertekschool.com/dropdown
-        //st
+
+        //locate all the web elements/dropdowns
+        Select yearDropdown = new Select(driver.findElement(By.xpath("//select[@id='year']")));
+        Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
+        Select dayDropdown = new Select(driver.findElement(By.xpath("//select[@id='day']")));
+
         //3. Select “December 1 , 1921” and verify it is selected.
         //   Select year using Select month using Select day using
         //: visible text
         //: value attribute : index number
+
+        //BREAK UNTIL 11.11AM CST - 12.11PM EST
     }
 
 
