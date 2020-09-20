@@ -27,13 +27,20 @@ public class DropdownTasks {
 
     //TC #2: Selecting state from State dropdown and verifying result
     @Test
-    public void test2_verify_state_dropdown(){
+    public void test2_verify_state_dropdown() throws InterruptedException{
         // we need to locate the dropdown
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
-        //3. Select Illinois
-        
-        //4. Select Virginia
-        //5. Select California
+        //3. Select Illinois --> selecting by visible text
+        Thread.sleep(1000);
+        stateDropdown.selectByVisibleText("Illinois");
+
+        //4. Select Virginia --> selecting by value
+        Thread.sleep(1000);
+        stateDropdown.selectByValue("VA");
+
+        //5. Select California --> select by index
+        Thread.sleep(1000);
+        stateDropdown.selectByIndex(5);
         //6. Verify final selected option is California.
         //Use all Select options. (visible text, value, index)
     }
