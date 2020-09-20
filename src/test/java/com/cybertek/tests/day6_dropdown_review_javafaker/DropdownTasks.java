@@ -107,7 +107,7 @@ public class DropdownTasks {
 
     //TC #4: Selecting value from multiple select dropdown
     @Test
-    public void test4_multiple_value_select_dropdown(){
+    public void test4_multiple_value_select_dropdown() throws InterruptedException {
 
         //3. Select all the options from multiple select dropdown.
         // Locate the dropdown
@@ -121,6 +121,7 @@ public class DropdownTasks {
         //Loop through the options to select all of them
 
         for(WebElement eachOption : allOptions){
+            Thread.sleep(500);
             eachOption.click(); // this will click each option with every iteration
 
             //4. Print out all selected values.
@@ -132,6 +133,16 @@ public class DropdownTasks {
         }
 
         //5. Deselect all values.
+        multipleSelectDropdown.deselectAll();
+
+        for(WebElement eachOption : allOptions){
+            //Assert.assertTrue(!eachOption.isSelected()); //it will be false boolean value, with ! we make it "true"
+
+            // assertFalse method looks for "false" boolean value to pass the test.
+            Assert.assertFalse(eachOption.isSelected());
+        }
+
+
     }
 
 
