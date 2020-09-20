@@ -145,11 +145,9 @@ public class DropdownTasks {
         //BREAK UNTIL 1.05PM CST - 2.05PM EST
     }
 
+    //TC #5: Selecting value from non-select dropdown
     @Test
     public void test5_html_dropdown_handling(){
-        //TC #5: Selecting value from non-select dropdown
-
-
         //Locate the HTML dropdown as a regular web element
         WebElement websiteDropdown = driver.findElement(By.xpath("//div[@class='dropdown']/a"));
 
@@ -160,8 +158,12 @@ public class DropdownTasks {
         WebElement facebookLink = driver.findElement(By.xpath("//a[.='Facebook']"));
 
         facebookLink.click();
-        
+
         //5. Verify title is “Facebook - Log In or Sign Up”
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Facebook - Log In or Sign Up";
+
+        Assert.assertEquals(actualTitle, expectedTitle);
     }
 
 
