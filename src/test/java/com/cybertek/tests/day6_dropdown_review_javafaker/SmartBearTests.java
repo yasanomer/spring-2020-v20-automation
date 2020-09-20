@@ -64,8 +64,18 @@ public class SmartBearTests {
         Thread.sleep(1000);
         quantityInput.sendKeys("2");
 
-
         //8. Click to “Calculate” button
+        WebElement calculateButton = driver.findElement(By.xpath("//input[@value='Calculate']"));
+        calculateButton.click();
+
+        //locating all of the web elements using id
+        WebElement nameInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtName"));
+        WebElement streetInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox2"));
+        WebElement cityInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox3"));
+        WebElement stateInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox4"));
+        WebElement zipInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5"));
+
+
         //9. Fill address Info with JavaFaker
         //• Generate: name, street, city, state, zip code
         //10. Click on “visa” radio button
