@@ -30,6 +30,7 @@ public class DropdownTasks {
     @Test
     public void test2_verify_state_dropdown() throws InterruptedException{
         // we need to locate the dropdown
+
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
         //3. Select Illinois --> selecting by visible text
         Thread.sleep(1000);
@@ -49,7 +50,7 @@ public class DropdownTasks {
         Assert.assertEquals(actualResult, expectedResult, "Actual vs expected is not equal!");
 
         //Use all Select options. (visible text, value, index)
-
+        
 
 
     }
