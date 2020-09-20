@@ -145,5 +145,17 @@ public class DropdownTasks {
         //BREAK UNTIL 1.05PM CST - 2.05PM EST
     }
 
+    @Test
+    public void test5_html_dropdown_handling(){
+        //TC #5: Selecting value from non-select dropdown
+
+        //3. Click to non-select dropdown
+        //Locate the HTML dropdown as a regular web element
+        WebElement websiteDropdown = driver.findElement(By.xpath(""));
+
+        //4. Select Facebook from dropdown
+        //5. Verify title is “Facebook - Log In or Sign Up”
+    }
+
 
 }
