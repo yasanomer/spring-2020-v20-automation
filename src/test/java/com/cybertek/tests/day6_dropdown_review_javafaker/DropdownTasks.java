@@ -19,6 +19,11 @@ public class DropdownTasks {
 //        driver = WebDriverFactory.getDriver("chrome");
 //    }
 
+//    @AfterMethod
+//    public void tearDownMethod(){
+//        driver.close();
+//    }
+
     @BeforeMethod
     public void setupMethod(){
         //open a new browser
