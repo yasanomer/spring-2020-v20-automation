@@ -3,6 +3,7 @@ package com.cybertek.tests.day6_dropdown_review_javafaker;
 import com.cybertek.utilities.SmartBearUtilities;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
@@ -46,7 +47,7 @@ public class SmartBearTests {
     }
 
     @Test
-    public void task2_create_order_with_javafaker(){
+    public void task2_create_order_with_javafaker() throws InterruptedException {
         //6. Click on Order
         WebElement orderLink = driver.findElement(By.xpath("//a[.='Order']"));
         orderLink.click();
@@ -56,7 +57,13 @@ public class SmartBearTests {
         productDropdown.selectByVisibleText("FamilyAlbum");
 
         WebElement quantityInput = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
+        //quantityInput.clear();
+        Thread.sleep(1000);
+        quantityInput.sendKeys(Keys.BACK_SPACE );
+
+        Thread.sleep(1000);
         quantityInput.sendKeys("2");
+
 
         //8. Click to “Calculate” button
         //9. Fill address Info with JavaFaker
