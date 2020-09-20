@@ -149,11 +149,18 @@ public class DropdownTasks {
     public void test5_html_dropdown_handling(){
         //TC #5: Selecting value from non-select dropdown
 
-        //3. Click to non-select dropdown
+
         //Locate the HTML dropdown as a regular web element
-        WebElement websiteDropdown = driver.findElement(By.xpath(""));
+        WebElement websiteDropdown = driver.findElement(By.xpath("//div[@class='dropdown']/a"));
+
+        //3. Click to non-select dropdown
+        websiteDropdown.click();
 
         //4. Select Facebook from dropdown
+        WebElement facebookLink = driver.findElement(By.xpath("//a[.='Facebook']"));
+
+        facebookLink.click();
+        
         //5. Verify title is “Facebook - Log In or Sign Up”
     }
 
