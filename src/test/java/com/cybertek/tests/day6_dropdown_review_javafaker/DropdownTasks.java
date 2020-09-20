@@ -62,16 +62,33 @@ public class DropdownTasks {
         Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
         Select dayDropdown = new Select(driver.findElement(By.xpath("//select[@id='day']")));
 
+        //3. Select “December 1 , 1921” and verify it is selected.
+        //Selecting year using text
+        yearDropdown.selectByVisibleText("1921");
+
+        //Selecting month by "value" attribute's value
+        monthDropdown.selectByValue("11");
+
+        //Select day 1 by using index
+        dayDropdown.selectByIndex(0);
+
         //creating expected values in one place
         String expectedYear = "1921";
         String expectedMonth = "December";
         String expectedDay = "1";
 
-        //3. Select “December 1 , 1921” and verify it is selected.
-        //   Select year using Select month using Select day using
-        //  : visible text: value attribute : index number
+        //getting our actual values from the web page
+        String actualYear = yearDropdown.getFirstSelectedOption().getText();
+        String actualMonth = monthDropdown.getFirstSelectedOption().getText();
+        String actualDay = dayDropdown.getFirstSelectedOption().getText();
 
-        //BREAK UNTIL 11.11AM CST - 12.11PM EST
+        //creating assert lines to compare actual vs expected
+        Assert.assertEquals(actualYear, expectedYear, "Actual year vs expected year not equal");
+        Assert.assertEquals(actualMonth, expectedMonth, "Actual month vs expected month not equal");
+        Assert.assertTrue(actualDay.equals(expectedDay), "Actual day vs expected day not equal");
+
+
+
     }
 
 
