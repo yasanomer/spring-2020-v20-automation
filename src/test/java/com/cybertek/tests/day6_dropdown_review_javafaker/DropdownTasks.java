@@ -163,7 +163,7 @@ public class DropdownTasks {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Facebook - Log In or Sign Up";
 
-        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(actualTitle, expectedTitle, "Actual title does not match expected title!");
     }
 
 
