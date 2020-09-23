@@ -40,6 +40,8 @@ public class WebTableTasks {
         String expectedDate = "01/05/2010";
         String actualDate = susansDate.getText();
 
+        System.out.println("expectedDate = " + expectedDate);
+
         //Assert
         Assert.assertTrue(actualDate.equals(expectedDate), "Actual date is not equal to expected date");
 
