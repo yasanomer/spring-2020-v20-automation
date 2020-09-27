@@ -31,6 +31,7 @@ public class DropdownPractices {
         Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
 
         //Expected
+        //We are dynamically getting the current month name from LocalDateTime java class.
         String expectedValue = LocalDateTime.now().getMonth().name();
         System.out.println("expectedValue = " + expectedValue);
 
