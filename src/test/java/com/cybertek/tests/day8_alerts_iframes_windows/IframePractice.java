@@ -31,11 +31,14 @@ public class IframePractice {
      */
     @Test
     public void p4_iframe_practice(){
-        
-        //3 ways of locating.
+
+        //3 ways of locating and switching an IFRAME.
         //1- ByIndex
-        driver.switchTo().frame(0);
-        //2- By Id or Name
+        //driver.switchTo().frame(0);
+
+        //2- By Id or Name: passing id attribute value
+        driver.switchTo().frame("mce_0_ifr");
+        
         //3- Locate as a web element, then switch to it
 
 
