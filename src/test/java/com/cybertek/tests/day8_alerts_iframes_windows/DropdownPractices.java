@@ -62,10 +62,14 @@ public class DropdownPractices {
         //Create a new list of Strings called: actualMonthsTexts , and store the texts of web elements into this new list
         List<String> actualMonthsTexts = new ArrayList<>();
 
+        for (WebElement each : actualMonthOptions) {
 
+            actualMonthsTexts.add(each.getText());
+
+        }
 
         //Passing List into assertions:
         //First it will check the size, then it will check the content
-        Assert.assertEquals(actualMonthOptions, expectedMonthOptions);
+        Assert.assertEquals(actualMonthsTexts, expectedMonthOptions);
     }
 }
