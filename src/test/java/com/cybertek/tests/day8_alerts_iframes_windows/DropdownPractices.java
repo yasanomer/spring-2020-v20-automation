@@ -72,7 +72,7 @@ public class DropdownPractices {
         //Passing List into assertions:
         //First it will check the size, then it will check the content
         Assert.assertEquals(BrowserUtils.getElementsText(actualMonthOptions), expectedMonthOptions);
-        
+
     }
 
 }
