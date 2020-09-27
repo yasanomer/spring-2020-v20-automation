@@ -4,9 +4,11 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
 public class DropdownPractices {
@@ -28,5 +30,19 @@ public class DropdownPractices {
         //Locating the month dropdown
         Select monthDropdown = new Select(driver.findElement(By.xpath("//select[@id='month']")));
 
+        //Expected
+        String expectedValue = LocalDateTime.now().getMonth().name();
+        System.out.println("expectedValue = " + expectedValue);
+
+        //Actual
+        String actualValue = monthDropdown.getFirstSelectedOption().getText();
+        System.out.println("actualValue = " + actualValue);
+
+        //Assert
+        //First way of doing this assertion: use .toLowerCase() method for both actual and expected values
+        Assert.assertEquals(actualValue.toLowerCase(), expectedValue.toLowerCase());
+
+        //Second way: use equalsIgnoreCase to compare actual and expected values
+        Assert.assertTrue(actualValue.equalsIgnoreCase(expectedValue));
     }
 }
