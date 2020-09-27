@@ -50,6 +50,15 @@ public class AlertsPractices {
 
     }
 
+    @Test
+    public void p2_confirmation_alert_practice(){
+        //Locating the warning/information alert button to click it
+        WebElement warningAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Confirm']"));
+
+        //click to the button
+        warningAlertButton.click();
+    }
+
 
 
 }
