@@ -62,7 +62,16 @@ public class AlertsPractices {
         Alert alert = driver.switchTo().alert();
 
         //We can either accept(), or dismiss() the confirmation alert
+        //alert.dismiss();
         alert.accept();
+
+        //Locating the result text web element
+        WebElement resultText = driver.findElement(By.xpath("//p[@id='result']"));
+
+        //Assert
+        Assert.assertTrue(resultText.isDisplayed(), "Text is not displayed. Verification FAILED!!!");
+
+
 
     }
 
