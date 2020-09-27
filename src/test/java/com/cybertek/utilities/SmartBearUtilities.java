@@ -70,9 +70,18 @@ public class SmartBearUtilities {
     • Name2: name , City2: city
      */
     public static void printNamesAndCities(WebDriver driver){
-        
+
         //locating all the names from all the rows and storing in a list of web element
         List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
+
+        //we need to locate all the cities from all the rows
+        List<WebElement> citiesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[7]"));
+
+        for (int i = 0; i < namesList.size() ; i++) {
+
+            System.out.println("Name: " + namesList.get(i).getText() + ", Cities: " + citiesList.get(i).getText());
+
+        }
 
     }
 
