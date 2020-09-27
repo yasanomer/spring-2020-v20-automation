@@ -3,6 +3,7 @@ package com.cybertek.utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -37,8 +38,22 @@ public class SmartBearUtilities {
      */
     public static void verifyOrder(WebDriver driver, String name){
 
+        //Created a locator that only returns the names of the costumer from all of the rows
+        //Created a list and stored the cells that has costumer name information into it.
         List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
 
+        //If there is only one table on the page, you dont have to locate the table. --> //tr/td[2]
+        //List<WebElement> namesList = driver.findElements(By.xpath("//tr/td[2]"));
+
+        for (WebElement each : namesList) {
+
+            if (each.getText().equals(name)){
+                Assert.assertTrue(true);
+                return;
+            }
+        }
+
+        Assert.fail("Name does not exist in the list!");
 
     }
 
