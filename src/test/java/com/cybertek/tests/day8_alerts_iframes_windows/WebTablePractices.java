@@ -31,7 +31,13 @@ public class WebTablePractices {
 
     }
 
-    //BREAK TIME: 10.09am CST, 11.09am EST
+    //Using the printNamesAndCities method to print all names and their cities
+    @Test
+    public void task5_print_names_and_cities(){
+
+        SmartBearUtilities.printNamesAndCities(driver);
+
+    }
 
 
 }
