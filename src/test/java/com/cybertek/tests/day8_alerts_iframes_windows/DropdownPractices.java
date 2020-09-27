@@ -59,6 +59,8 @@ public class DropdownPractices {
         List<String> expectedMonthOptions = Arrays.asList("January", "February", "March", "April", "May", "June", "July",
                 "August","September","October", "November", "December");
 
+       
+
         //Create a new list of Strings called: actualMonthsTexts , and store the texts of web elements into this new list
 //        List<String> actualMonthsTexts = new ArrayList<>();
 //
