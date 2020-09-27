@@ -26,10 +26,12 @@ public class WebTablePractices {
     @Test
     public void task4_verify_order(){
 
-        //SmartBearUtilities.verifyOrder(driver, "Mark Smith");
-        SmartBearUtilities.verifyOrder(driver, "Mark Smiths");
+        SmartBearUtilities.verifyOrder(driver, "Mark Smith");
+        //SmartBearUtilities.verifyOrder(driver, "Mark Smiths");
 
     }
+
+    //BREAK TIME: 10.09am CST, 11.09am EST
 
 
 }
