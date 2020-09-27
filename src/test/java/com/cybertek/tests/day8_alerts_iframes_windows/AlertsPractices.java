@@ -1,6 +1,7 @@
 package com.cybertek.tests.day8_alerts_iframes_windows;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,7 +32,12 @@ public class AlertsPractices {
         //click to the button
         warningAlertButton.click();
 
-        
+        //1- Create Alert instance and switch to alert
+        Alert alert = driver.switchTo().alert();
+
+        //2- Use "alert" instance to accept the javascript alert(popup)
+        alert.accept();
+
 
     }
 
