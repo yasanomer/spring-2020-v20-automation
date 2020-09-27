@@ -57,6 +57,13 @@ public class AlertsPractices {
 
         //click to the button
         warningAlertButton.click();
+
+        //Create alert instance
+        Alert alert = driver.switchTo().alert();
+
+        //We can either accept(), or dismiss() the confirmation alert
+        alert.accept();
+
     }
 
 
