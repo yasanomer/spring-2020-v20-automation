@@ -25,8 +25,13 @@ public class AlertsPractices {
     @Test
     public void p1_information_alert_practice(){
 
+        //Locating the warning/information alert button to click it
         WebElement warningAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 
+        //click to the button
+        warningAlertButton.click();
+
+        
 
     }
 
