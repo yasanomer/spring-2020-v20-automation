@@ -26,6 +26,9 @@ public class WebTablePractices {
     @Test
     public void task4_verify_order(){
 
+        //SmartBearUtilities.verifyOrder(driver, "Mark Smith");
+        SmartBearUtilities.verifyOrder(driver, "Mark Smiths");
+
     }
 
 
