@@ -79,7 +79,7 @@ public class SmartBearUtilities {
 
         for (int i = 0; i < namesList.size() ; i++) {
 
-            System.out.println("Name: " + namesList.get(i).getText() + ", City: " + citiesList.get(i).getText());
+            System.out.println("Name"+ (i+1) +": " + namesList.get(i).getText() + ", City"+ (i+1) +": " + citiesList.get(i).getText());
 
         }
 
