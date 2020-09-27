@@ -1,7 +1,9 @@
 package com.cybertek.tests.day8_alerts_iframes_windows;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,7 +25,7 @@ public class AlertsPractices {
     @Test
     public void p1_information_alert_practice(){
 
-
+        WebElement warningAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Alert']"));
 
 
     }
