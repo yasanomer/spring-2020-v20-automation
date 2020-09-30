@@ -52,7 +52,17 @@ public class WindowHandlingPractices {
         String mainHandle = driver.getWindowHandle();
         System.out.println("mainHandle = " + mainHandle);
 
+        //Set allows only unique values.
+        //alt+enter for windows
+        //option+enter for mac
         Set<String> windowHandles = driver.getWindowHandles();
+        // we loop through the set of window handles so that we can get the window handle of the other windows
+        // then using switchTo().window() method we switch to the other windows
+
+        for (String each : windowHandles) {
+            driver.switchTo().window(each);
+            System.out.println("Current title= " + driver.getTitle());
+        }
 
     }
 
