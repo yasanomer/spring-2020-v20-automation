@@ -1,7 +1,10 @@
 package com.cybertek.tests.day9_windows_tabs;
 
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -34,6 +37,16 @@ public class WindowHandlingPractices {
     @Test
     public void p5_handling_windows(){
 
+        String actualTitle = driver.getTitle();
+        System.out.println("actualTitle = " + actualTitle);
+
+        Assert.assertTrue(actualTitle.equals("Practice"));
+
+        WebElement clickHereLink = driver.findElement(By.linkText("Click Here"));
+        clickHereLink.click();
+
+        String titleAfterClick = driver.getTitle();
+        System.out.println("titleAfterClick = " + titleAfterClick);
     }
 
 }
