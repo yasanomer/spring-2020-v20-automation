@@ -6,6 +6,7 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -46,12 +47,22 @@ public class Alert3Practice {
         BrowserUtils.wait(2);
 
         //Sending keys to the "prompt" alert
-        alert.sendKeys("something is happening");
+        String input = "something is happening";
 
+        alert.sendKeys(input);
+
+        BrowserUtils.wait(2);
         //Accepting the alert
         alert.accept();
 
+        WebElement resultText = driver.findElement(By.id("result"));
 
+        Assert.assertTrue(resultText.isDisplayed(), "The result text is not displayed. Verification FAILED!!!");
+
+        //Verify that the result text CONTAINS the entered input
+        String actual = resultText.getText();
+
+        Assert.assertTrue(actual.contains(input), "The result DOES NOT contain the input. Verification FAILED!!!");
 
 
 
