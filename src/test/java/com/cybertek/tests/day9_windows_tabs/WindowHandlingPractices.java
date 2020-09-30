@@ -86,11 +86,21 @@ public class WindowHandlingPractices {
     public void p6_handling_more_than_two_windows(){
 
         driver.get("https://amazon.com");
+
+        //THIS LINE IS BASICALLY : We are downcasting our driver type to JavaScriptExecutor
+        // THe only thing this line is doing is USING JS EXECUTOR -> opening new tabs with given links
         ((JavascriptExecutor) driver).executeScript("window.open('http://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
+        Set<String> windowHandles = driver.getWindowHandles();
 
+        for (String each : windowHandles) {
+
+            driver.switchTo().window(each);
+            System.out.println("Current page title: " + driver.getTitle());
+
+        }
 
     }
 
