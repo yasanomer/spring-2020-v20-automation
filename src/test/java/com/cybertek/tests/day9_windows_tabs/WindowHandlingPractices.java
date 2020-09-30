@@ -94,11 +94,20 @@ public class WindowHandlingPractices {
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
         Set<String> windowHandles = driver.getWindowHandles();
+        //AMAZON
+        //FACEBOOK
+        //ETSY
+        //GOOGLE
 
         for (String each : windowHandles) {
-
+            BrowserUtils.wait(1);
             driver.switchTo().window(each);
             System.out.println("Current page title: " + driver.getTitle());
+
+            if (driver.getCurrentUrl().contains("etsy")){
+                Assert.assertTrue(driver.getTitle().contains("Etsy"));
+                break;
+            }
 
         }
 
