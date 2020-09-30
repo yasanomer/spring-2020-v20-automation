@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class WindowHandlingPractices {
@@ -47,6 +48,12 @@ public class WindowHandlingPractices {
 
         String titleAfterClick = driver.getTitle();
         System.out.println("titleAfterClick = " + titleAfterClick);
+
+        String mainHandle = driver.getWindowHandle();
+        System.out.println("mainHandle = " + mainHandle);
+
+        Set<String> windowHandles = driver.getWindowHandles();
+
     }
 
 }
