@@ -1,7 +1,11 @@
 package com.cybertek.tests.day9_windows_tabs;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.WebDriverFactory;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,6 +35,27 @@ public class Alert3Practice {
      */
     @Test
     public void p3_prompt_alert_practice(){
+        WebElement promptAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Prompt']"));
+
+        promptAlertButton.click();
+
+        //Using Alert class to handle alert
+        Alert alert = driver.switchTo().alert();
+
+        //BrowserUtils class we created to store commonly used utility methods
+        BrowserUtils.wait(2);
+
+        //Sending keys to the "prompt" alert
+        alert.sendKeys("something is happening");
+
+        //Accepting the alert
+        alert.accept();
+
+
+
+
+
+
 
     }
 
