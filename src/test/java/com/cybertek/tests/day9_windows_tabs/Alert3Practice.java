@@ -38,6 +38,10 @@ public class Alert3Practice {
     public void p3_prompt_alert_practice(){
         WebElement promptAlertButton = driver.findElement(By.xpath("//button[.='Click for JS Prompt']"));
 
+        //WebElement resultText = driver.findElement(By.id("result"));
+        //System.out.println(resultText.isDisplayed());
+        //Assert.assertFalse(resultText.isDisplayed());
+
         promptAlertButton.click();
 
         //Using Alert class to handle alert
