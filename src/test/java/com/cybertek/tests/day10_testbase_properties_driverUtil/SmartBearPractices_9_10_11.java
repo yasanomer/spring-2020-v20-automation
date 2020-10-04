@@ -1,5 +1,6 @@
 package com.cybertek.tests.day10_testbase_properties_driverUtil;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.SmartBearUtilities;
 import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class SmartBearPractices_9_10_11 {
@@ -33,14 +35,20 @@ public class SmartBearPractices_9_10_11 {
     @Test
     public void p9_delete_order_task(){
         //Locate the checkbox for 'Mark Smith' and click to it
-        //WebElement markSmithCheckBox = driver.findElement(By.xpath("//td[.='Mark Smith']/preceding-sibling::td[1]"));
-        WebElement markSmithCheckbox = driver.findElement(By.xpath("//td[.='Mark Smith']/../td[1]"));
+        BrowserUtils.wait(2);
+        //WebElement markSmithCheckbox = driver.findElement(By.xpath("//td[.='Mark Smith']/preceding-sibling::td[1]"));
+        //WebElement markSmithCheckbox = driver.findElement(By.xpath("//td[.='Mark Smith']/../td[1]"));
+        WebElement markSmithCheckbox = driver.findElement(By.id("ctl00_MainContent_orderGrid_ctl03_OrderSelector"));
+        BrowserUtils.wait(3);
         markSmithCheckbox.click();
-
+        BrowserUtils.wait(3);
         //Locate 'Delete Selected' button and click to it
         WebElement deleteButton = driver.findElement(By.id("ctl00_MainContent_btnDelete"));
         deleteButton.click();
         //Assert 'Mark Smith' is not in the table
+
+        List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
+
 
 
 
