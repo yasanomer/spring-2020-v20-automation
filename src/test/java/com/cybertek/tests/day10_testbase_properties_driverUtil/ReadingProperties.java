@@ -3,13 +3,13 @@ package com.cybertek.tests.day10_testbase_properties_driverUtil;
 import org.testng.annotations.Test;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Properties;
 
 public class ReadingProperties {
 
     @Test
-    public void reading_from_properties_file() throws FileNotFoundException {
+    public void reading_from_properties_file() throws IOException {
 
         // Properties: Use Properties class object
         // We create properties object to be able to read configuration.properties file
@@ -23,6 +23,8 @@ public class ReadingProperties {
         FileInputStream file = new FileInputStream(path);
 
         // We will load the file
+        properties.load(file);
+
         // We read from the file
         // Close the file
 
