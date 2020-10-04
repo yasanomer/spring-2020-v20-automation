@@ -19,11 +19,11 @@ public class DriverUtilsPractice {
         //locating the google search box using its name attribute value
         WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
         String search = ConfigurationReader.getProperty("searchValue");
-                
-        searchBox.sendKeys("wooden spoon" + Keys.ENTER);
+
+        searchBox.sendKeys(search + Keys.ENTER);
 
         //expected
-        String expectedInTitle = "wooden spoon";
+        String expectedInTitle = search;
         //actual
         String actualTitle = Driver.getDriver().getTitle();
 
