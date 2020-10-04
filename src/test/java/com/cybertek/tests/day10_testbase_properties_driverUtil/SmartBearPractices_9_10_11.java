@@ -33,8 +33,13 @@ public class SmartBearPractices_9_10_11 {
     @Test
     public void p9_delete_order_task(){
         //Locate the checkbox for 'Mark Smith' and click to it
-        WebElement markSmithCheckbox = driver.findElement(By.xpath(""));
+        //WebElement markSmithCheckBox = driver.findElement(By.xpath("//td[.='Mark Smith']/preceding-sibling::td[1]"));
+        WebElement markSmithCheckbox = driver.findElement(By.xpath("//td[.='Mark Smith']/../td[1]"));
+        markSmithCheckbox.click();
+
         //Locate 'Delete Selected' button and click to it
+        WebElement deleteButton = driver.findElement(By.id("ctl00_MainContent_btnDelete"));
+        deleteButton.click();
         //Assert 'Mark Smith' is not in the table
 
 
