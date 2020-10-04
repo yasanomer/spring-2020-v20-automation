@@ -1,5 +1,6 @@
 package com.cybertek.tests.day10_testbase_properties_driverUtil;
 
+import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -17,7 +18,8 @@ public class DriverUtilsPractice {
 
         //locating the google search box using its name attribute value
         WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
-
+        String search = ConfigurationReader.getProperty("searchValue");
+                
         searchBox.sendKeys("wooden spoon" + Keys.ENTER);
 
         //expected
