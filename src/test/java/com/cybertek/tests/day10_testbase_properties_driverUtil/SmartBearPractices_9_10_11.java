@@ -51,6 +51,7 @@ public class SmartBearPractices_9_10_11 {
         List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
 
         for (WebElement each : namesList) {
+            //Assert.assertTrue(!each.getText().equals("Mark Smith"));
             Assert.assertFalse(each.getText().equals("Mark Smith"));
         }
 
