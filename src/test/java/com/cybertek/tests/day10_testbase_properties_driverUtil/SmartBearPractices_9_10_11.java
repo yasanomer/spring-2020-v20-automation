@@ -34,7 +34,7 @@ public class SmartBearPractices_9_10_11 extends TestBase {
 
         //--> URL FROM CONFIGURATION PROPERTIES
         String url = properties.getProperty("smartbearUrl");
-        
+
         driver.get(url);
 
         SmartBearUtilities.loginToSmartBear(driver);
