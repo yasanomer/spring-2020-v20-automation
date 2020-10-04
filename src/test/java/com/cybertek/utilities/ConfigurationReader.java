@@ -9,7 +9,6 @@ public class ConfigurationReader {
     //#1- We created the properties object
     private static Properties properties = new Properties();
 
-
     static {
         try {
             //#2- We get the path and pass it into FileInputStream, to open the file
@@ -23,8 +22,10 @@ public class ConfigurationReader {
             System.out.println("Properties file not found.");
         }
     }
-    //#4- We read from file
-
+    //#4- We read from file: we will be creating a utility method for reading.
+    public static String getProperty(String keyWord){
+        return properties.getProperty(keyWord);
+    }
 
 
 }
