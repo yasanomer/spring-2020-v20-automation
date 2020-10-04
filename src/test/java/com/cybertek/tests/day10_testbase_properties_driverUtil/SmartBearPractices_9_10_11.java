@@ -6,6 +6,7 @@ import com.cybertek.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -49,6 +50,9 @@ public class SmartBearPractices_9_10_11 {
 
         List<WebElement> namesList = driver.findElements(By.xpath("//table[@id='ctl00_MainContent_orderGrid']//tr/td[2]"));
 
+        for (WebElement each : namesList) {
+            Assert.assertFalse(each.getText().equals("Mark Smith"));
+        }
 
 
 
