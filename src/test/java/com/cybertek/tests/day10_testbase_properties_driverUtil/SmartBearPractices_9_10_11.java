@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.FileInputStream;
 import java.util.List;
+import java.util.Properties;
 
 public class SmartBearPractices_9_10_11 extends TestBase {
 
@@ -20,6 +22,9 @@ public class SmartBearPractices_9_10_11 extends TestBase {
      */
     @Test
     public void p9_delete_order_task(){
+        Properties properties = new Properties();
+        FileInputStream file = new FileInputStream("configuration.properties");
+
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
         SmartBearUtilities.loginToSmartBear(driver);
         //Locate the checkbox for 'Mark Smith' and click to it
