@@ -16,14 +16,15 @@ public class ConfigurationReader {
             FileInputStream file = new FileInputStream("configuration.properties");
             //#3- We load the opened file into properties object
             properties.load(file);
-
+            //#5- close the file
+            file.close();
 
         } catch (IOException e) {
             System.out.println("Properties file not found.");
         }
     }
     //#4- We read from file
-    //#5- close the file
+
 
 
 }
