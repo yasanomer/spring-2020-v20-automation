@@ -1,8 +1,10 @@
 package com.cybertek.tests.day11_utils_review_actions;
 
+import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -33,7 +35,16 @@ public class ActionsPractices {
         WebElement user2 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user2']"));
         WebElement user3 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user3']"));
 
-        
+        //#1- Create the instance of actions class, AND pass the driver instance into the constructor
+        Actions actions = new Actions(Driver.getDriver());
+
+        //#2- Use the actions object, and call necessary methods.
+        BrowserUtils.wait(2);
+        actions.moveToElement(img1).perform();
+
+        //#3- Do the assertion
+
+
 
     }
 
