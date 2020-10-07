@@ -30,6 +30,10 @@ public class ActionsPractices {
         WebElement img3 = Driver.getDriver().findElement(By.xpath("(//div[@class='figure'])[3]"));
 
         WebElement user1 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user1']"));
+        WebElement user2 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user2']"));
+        WebElement user3 = Driver.getDriver().findElement(By.xpath("//h5[.='name: user3']"));
+
+        
 
     }
 
