@@ -5,6 +5,7 @@ import com.cybertek.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -41,6 +42,7 @@ public class ActionsPractices {
         //#2- Use the actions object, and call necessary methods.
         BrowserUtils.wait(2);
         actions.moveToElement(img1).perform();
+        Assert.assertTrue(user1.isDisplayed(), "Image 1 is NOT displayed! Verification failed!!!");
 
         //#3- Do the assertion
 
