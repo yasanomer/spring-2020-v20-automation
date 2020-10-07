@@ -26,6 +26,8 @@ public class ActionsPractices {
         Driver.getDriver().get("http://practice.cybertekschool.com/hovers");
 
         WebElement img1 = Driver.getDriver().findElement(By.xpath("(//div[@class='figure'])[1]"));
+        WebElement img2 = Driver.getDriver().findElement(By.xpath("(//div[@class='figure'])[2]"));
+        WebElement img3 = Driver.getDriver().findElement(By.xpath("(//div[@class='figure'])[3]"));
 
     }
 
