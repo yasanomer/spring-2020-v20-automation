@@ -15,7 +15,7 @@ public class SingletonPractices {
 
         String str3 = Singleton.getWord();
         System.out.println("str3 = " + str3);
-
+        //BREAK UNTIL 8.10PM CST = 9.10PM EST
     }
 
     @Test
