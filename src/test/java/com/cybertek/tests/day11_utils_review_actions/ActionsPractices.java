@@ -42,10 +42,15 @@ public class ActionsPractices {
         //#2- Use the actions object, and call necessary methods.
         BrowserUtils.wait(2);
         actions.moveToElement(img1).perform();
+        //#3- Do the assertion
         Assert.assertTrue(user1.isDisplayed(), "Image 1 is NOT displayed! Verification failed!!!");
 
-        //#3- Do the assertion
+        //moving to img2
+        BrowserUtils.wait(2);
+        actions.moveToElement(img2).perform();
+        Assert.assertTrue(user2.isDisplayed(), "Image 2 is NOT displayed! Verification failed!!!");
 
+        
 
 
     }
