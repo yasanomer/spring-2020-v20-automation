@@ -50,7 +50,10 @@ public class ActionsPractices {
         actions.moveToElement(img2).perform();
         Assert.assertTrue(user2.isDisplayed(), "Image 2 is NOT displayed! Verification failed!!!");
 
-        
+        //moving to img3
+        BrowserUtils.wait(2);
+        actions.moveToElement(img3).perform();
+        Assert.assertTrue(user3.isDisplayed(), "Image 3 is NOT displayed! Verification failed!!!");
 
 
     }
