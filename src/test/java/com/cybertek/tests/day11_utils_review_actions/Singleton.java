@@ -10,7 +10,15 @@ public class Singleton {
 
     //Creating a 'getter' method to allow users to reach private String above
     public static String getWord(){
-        
+
+        if (word == null){
+
+            System.out.println("First time call. Word Object is null" +
+                    "Assigning value to it now!");
+            word = "something";
+
+        }
+
     }
 
 }
