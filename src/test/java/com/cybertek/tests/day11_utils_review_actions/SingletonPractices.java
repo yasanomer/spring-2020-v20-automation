@@ -15,9 +15,7 @@ public class SingletonPractices {
 
         String str3 = Singleton.getWord();
         System.out.println("str3 = " + str3);
-
-
-
+        
 
     }
 
