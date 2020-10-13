@@ -2,6 +2,7 @@ package com.cybertek.tests.day12_review_jsexecutor_pom;
 
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -136,12 +137,18 @@ public class ActionsPractices {
 
         //to be able to right click, we need to create actions instance
         Actions actions = new Actions(Driver.getDriver());
-
+        BrowserUtils.wait(2);
         //using "context click" method to right click on the box
         actions.contextClick(box).perform();
 
-        //3. Alert will open.
+
+        //3. Alert will open. Switch to alert
+        Alert alert = Driver.getDriver().switchTo().alert();
+
         //4. Accept alert
+        BrowserUtils.wait(2);
+        alert.accept();
+
         //No assertion needed for this practice.
     }
 
