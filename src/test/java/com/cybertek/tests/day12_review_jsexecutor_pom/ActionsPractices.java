@@ -55,9 +55,9 @@ public class ActionsPractices {
 
         Actions actions = new Actions(Driver.getDriver());
         //DragAndDrop method expects to arguments:
-        // #1-Which webElement you want to drag
-        // #2-Where do you want to drop it?
-        actions.dragAndDrop();
+        // #1-Which webElement you want to drag : SOURCE
+        // #2-Where do you want to drop it? : TARGET
+        actions.dragAndDrop(smallCircle, bigCircle).perform();
 
         //3. Assert:
         //-Text in big circle changed to: “You did great
