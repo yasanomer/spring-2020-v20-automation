@@ -128,9 +128,12 @@ public class ActionsPractices {
         //TC #17: Context Click – HOMEWORK
         //1. Go to https://the-internet.herokuapp.com/context_menu
         Driver.getDriver().get("https://the-internet.herokuapp.com/context_menu");
-
+        Driver.getDriver().manage().window().maximize();
         //2. Right click to the box.
-        
+
+        //locating the box
+        WebElement box = Driver.getDriver().findElement(By.id("hot-spot"));
+
         //3. Alert will open.
         //4. Accept alert
         //No assertion needed for this practice.
