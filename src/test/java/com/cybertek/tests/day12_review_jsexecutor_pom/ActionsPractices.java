@@ -40,9 +40,6 @@ public class ActionsPractices {
 
         Assert.assertTrue(actual.contains(expected));
 
-
-
-
     }
 
 
