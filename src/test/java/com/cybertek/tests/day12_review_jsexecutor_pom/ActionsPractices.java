@@ -1,6 +1,8 @@
 package com.cybertek.tests.day12_review_jsexecutor_pom;
 
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -21,7 +23,12 @@ public class ActionsPractices {
         // 2. Switch to iframe.
         Driver.getDriver().switchTo().frame("iframeResult");
 
+        //3. Double click on the text “Double-click me to change my text color.”
+        WebElement textToDoubleClick = Driver.getDriver().findElement(By.id("demo"));
+
         
+
+
 
 
 
