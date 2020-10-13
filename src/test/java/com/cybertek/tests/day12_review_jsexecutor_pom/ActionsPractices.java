@@ -123,5 +123,18 @@ public class ActionsPractices {
         Driver.closeDriver();
     }
 
+    @Test
+    public void p4_context_click_test(){
+        //TC #17: Context Click – HOMEWORK
+        //1. Go to https://the-internet.herokuapp.com/context_menu
+        Driver.getDriver().get("https://the-internet.herokuapp.com/context_menu");
+
+        //2. Right click to the box.
+        
+        //3. Alert will open.
+        //4. Accept alert
+        //No assertion needed for this practice.
+    }
+
 
 }
