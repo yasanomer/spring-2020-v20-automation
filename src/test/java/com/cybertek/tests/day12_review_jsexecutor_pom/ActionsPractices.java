@@ -1,5 +1,6 @@
 package com.cybertek.tests.day12_review_jsexecutor_pom;
 
+import com.cybertek.utilities.Driver;
 import org.testng.annotations.Test;
 
 public class ActionsPractices {
@@ -13,6 +14,15 @@ public class ActionsPractices {
      */
     @Test
     public void p2_double_click_test(){
+
+        //1. Go to https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2
+        Driver.getDriver().get("https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_ev_ondblclick2");
+
+        // 2. Switch to iframe.
+        Driver.getDriver().switchTo().frame("iframeResult");
+
+        
+
 
 
 
