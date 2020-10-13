@@ -134,6 +134,12 @@ public class ActionsPractices {
         //locating the box
         WebElement box = Driver.getDriver().findElement(By.id("hot-spot"));
 
+        //to be able to right click, we need to create actions instance
+        Actions actions = new Actions(Driver.getDriver());
+
+        //using "context click" method to right click on the box
+        actions.contextClick(box).perform();
+
         //3. Alert will open.
         //4. Accept alert
         //No assertion needed for this practice.
