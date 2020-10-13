@@ -42,5 +42,14 @@ public class ActionsPractices {
 
     }
 
+    @Test
+    public void p3_drag_and_drop(){
+        //1. Go to https://demos.telerik.com/kendo-ui/dragdrop/index
+        Driver.getDriver().get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        //2. Drag and drop the small circle to bigger circle.
+        //3. Assert:
+        //-Text in big circle changed to: “You did great
+    }
+
 
 }
