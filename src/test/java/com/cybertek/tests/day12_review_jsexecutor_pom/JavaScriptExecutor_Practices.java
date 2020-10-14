@@ -34,7 +34,7 @@ public class JavaScriptExecutor_Practices {
         Driver.getDriver().get("http://practice.cybertekschool.com/large");
 
         //locating cybertek school link
-        WebElement link = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        WebElement cybertekLink = Driver.getDriver().findElement(By.linkText("Cybertek School"));
         WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
 
         //use js executor to scroll 'Cybertek School' link intoView
@@ -42,11 +42,11 @@ public class JavaScriptExecutor_Practices {
 
         //use scrollIntoView function from JavaScript to scroll to a specific web element
         BrowserUtils.wait(2);
-        js.executeScript("arguments[0].scrollIntoView(true)", link);
+        js.executeScript("arguments[0].scrollIntoView(true)", cybertekLink);
         BrowserUtils.wait(2);
         js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
 
-        
+
     }
 
 }
