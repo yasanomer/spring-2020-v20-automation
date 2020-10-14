@@ -2,7 +2,9 @@ package com.cybertek.tests.day12_review_jsexecutor_pom;
 
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class JavaScriptExecutor_Practices {
@@ -31,10 +33,20 @@ public class JavaScriptExecutor_Practices {
         //get the page to scroll
         Driver.getDriver().get("http://practice.cybertekschool.com/large");
 
+        //locating cybertek school link
+        WebElement link = Driver.getDriver().findElement(By.linkText("Cybertek School"));
+        WebElement homeLink = Driver.getDriver().findElement(By.linkText("Home"));
+
         //use js executor to scroll 'Cybertek School' link intoView
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
+        //use scrollIntoView function from JavaScript to scroll to a specific web element
+        BrowserUtils.wait(2);
+        js.executeScript("arguments[0].scrollIntoView(true)", link);
+        BrowserUtils.wait(2);
+        js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
+
         
-
-
     }
 
 }
