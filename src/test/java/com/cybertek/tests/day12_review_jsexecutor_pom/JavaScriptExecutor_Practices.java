@@ -24,7 +24,10 @@ public class JavaScriptExecutor_Practices {
 
         }
 
+    }
 
+    @Test
+    public void scroll_using_jsexecutor_2(){
 
     }
 
