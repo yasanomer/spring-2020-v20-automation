@@ -46,6 +46,19 @@ public class JavaScriptExecutor_Practices {
         BrowserUtils.wait(2);
         js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
 
+        BrowserUtils.wait(2);
+        js.executeScript("window.scrollBy(500, 500)");
+
+    }
+
+    @Test
+    public void fill_form_using_javascript(){
+        Driver.getDriver().get("http://practice.cybertekschool.com/sign_up");
+
+        WebElement usernameInput = Driver.getDriver().findElement(By.name("full_name"));
+        WebElement emailInput = Driver.getDriver().findElement(By.name("email"));
+        WebElement signUpbutton = Driver.getDriver().findElement(By.name("wooden_spoon"));
+
 
     }
 
