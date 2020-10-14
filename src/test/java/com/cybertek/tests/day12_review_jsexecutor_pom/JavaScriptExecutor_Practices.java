@@ -59,6 +59,10 @@ public class JavaScriptExecutor_Practices {
         WebElement emailInput = Driver.getDriver().findElement(By.name("email"));
         WebElement signUpbutton = Driver.getDriver().findElement(By.name("wooden_spoon"));
 
+        BrowserUtils.wait(1);
+
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+
 
     }
 
