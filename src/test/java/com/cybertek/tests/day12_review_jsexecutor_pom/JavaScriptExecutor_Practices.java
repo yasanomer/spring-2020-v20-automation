@@ -63,6 +63,8 @@ public class JavaScriptExecutor_Practices {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
+        js.executeScript("arguments[0].setAttribute('value', 'Jane Doe')");
+
 
     }
 
