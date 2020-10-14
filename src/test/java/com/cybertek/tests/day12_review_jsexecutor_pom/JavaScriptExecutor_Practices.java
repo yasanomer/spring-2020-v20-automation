@@ -63,8 +63,16 @@ public class JavaScriptExecutor_Practices {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        js.executeScript("arguments[0].setAttribute('value', 'Jane Doe')");
+        //sending keys to usernameInput using JavaScript function .setAttribute
+        js.executeScript("arguments[0].setAttribute('value', 'Jane Doe')", usernameInput);
 
+        BrowserUtils.wait(1);
+        //sending keys to emailInput using JavaScript function .setAttribute
+        js.executeScript("arguments[0].setAttribute('value', 'something@gmail.com')", emailInput);
+
+        BrowserUtils.wait(1);
+        //clicking to signUpbutton using JavaScript function
+        js.executeScript("arguments[0].click()", signUpbutton);
 
     }
 
