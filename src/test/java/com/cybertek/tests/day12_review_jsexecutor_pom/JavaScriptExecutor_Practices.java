@@ -28,6 +28,12 @@ public class JavaScriptExecutor_Practices {
 
     @Test
     public void scroll_using_jsexecutor_2(){
+        //get the page to scroll
+        Driver.getDriver().get("http://practice.cybertekschool.com/large");
+
+        //use js executor to scroll 'Cybertek School' link intoView
+        
+
 
     }
 
