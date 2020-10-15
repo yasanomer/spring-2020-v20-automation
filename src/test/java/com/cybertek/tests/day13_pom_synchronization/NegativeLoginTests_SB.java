@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NegativeLoginTests_SB {
+    LoginPage loginPage;
 
     @Test (description = "entering incorrect username")
     public void negative_login_test1(){
@@ -17,7 +18,7 @@ public class NegativeLoginTests_SB {
         //Lets start using PageObjectModel
 
         //#1- We need to create the object of the class we want to use
-        LoginPage loginPage = new LoginPage();
+        loginPage = new LoginPage();
         //When we create the instance of this class, the constructor immediately
         //initializes our Driver and the object 'loginPage'
 
@@ -40,7 +41,14 @@ public class NegativeLoginTests_SB {
 
     @Test (description = "using login method for negative test")
     public void negative_login_test2(){
-        
+        String url = ConfigurationReader.getProperty("smartbearUrl");
+        Driver.getDriver().get(url);
+
+        loginPage = new LoginPage();
+
+        String username = "wrongusername";
+        String password = ConfigurationReader.getProperty("smartbear_password");
+
     }
 
 
