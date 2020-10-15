@@ -3,6 +3,7 @@ package com.cybertek.tests.day13_pom_synchronization;
 import com.cybertek.pages.LoginPage;
 import com.cybertek.utilities.ConfigurationReader;
 import com.cybertek.utilities.Driver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class NegativeLoginTests_SB {
@@ -31,7 +32,8 @@ public class NegativeLoginTests_SB {
         // Click to login button
         loginPage.loginButton.click();
 
-
+        //assert true that error message is displayed on the page
+        Assert.assertTrue(loginPage.errorMessage.isDisplayed(), "Error message is not displayed. Verification Failed!");
 
 
     }
