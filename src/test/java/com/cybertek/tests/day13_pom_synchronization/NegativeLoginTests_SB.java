@@ -49,6 +49,13 @@ public class NegativeLoginTests_SB {
         String username = "wrongusername";
         String password = ConfigurationReader.getProperty("smartbear_password");
 
+        loginPage.login(username, password);
+
+        //assert true that error message is displayed on the page
+        Assert.assertTrue(loginPage.errorMessage.isDisplayed(), "Error message is not displayed. Verification Failed!");
+
+
+
     }
 
 
