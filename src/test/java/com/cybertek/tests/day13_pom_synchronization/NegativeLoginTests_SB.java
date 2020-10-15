@@ -35,7 +35,7 @@ public class NegativeLoginTests_SB {
 
         //assert true that error message is displayed on the page
         Assert.assertTrue(loginPage.errorMessage.isDisplayed(), "Error message is not displayed. Verification Failed!");
-
+        //BREAK UNTIL 8.15PM CST - 9.15PM EST
 
     }
 
