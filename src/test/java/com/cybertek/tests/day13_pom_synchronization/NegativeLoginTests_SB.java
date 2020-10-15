@@ -38,6 +38,11 @@ public class NegativeLoginTests_SB {
 
     }
 
+    @Test (description = "using login method for negative test")
+    public void negative_login_test2(){
+        
+    }
+
 
 
 
