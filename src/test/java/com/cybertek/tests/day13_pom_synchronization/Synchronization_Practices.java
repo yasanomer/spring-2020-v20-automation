@@ -4,6 +4,7 @@ import com.cybertek.pages.Loading7Page;
 import com.cybertek.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Synchronization_Practices {
@@ -26,6 +27,10 @@ public class Synchronization_Practices {
 
         //we need to use the object 'wait' to SETUP OUR EXPECTED CONDITION
         wait.until(ExpectedConditions.titleIs("Dynamic title"));
+        
+        //assert that message is displayed
+        Assert.assertTrue(loading7Page.doneMessage.isDisplayed());
+
 
 
 
